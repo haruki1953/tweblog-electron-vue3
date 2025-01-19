@@ -16,7 +16,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()]
     })
   ],
-  base: '/admin/',
+  base: '/desktop/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

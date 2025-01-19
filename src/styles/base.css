@@ -95,34 +95,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-* {
-  /* 窄滚动条 */
-  scrollbar-width: thin;
-  /* 滑块颜色 + 轨道透明 */
-  scrollbar-color: var(--my-neutral) transparent;
-}
-
 /* 
  * 下面这些在web版兼容性不好，会影响移动端的滚动条宽度计算，只在electron用算了 
  */
 
 /* 滚动条宽度 */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
-} */
+}
 
 /* 滚动条轨道 */
-/* ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: transparent;
-} */
+}
 
 /* 滚动条滑块 */
-/* ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: var(--my-neutral);
   border-radius: 4px;
-} */
+}
 
-/* ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: var(--my-neutral-a6);
-} */
+}

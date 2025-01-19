@@ -28,8 +28,6 @@ import AboutMarkdown from './components/AboutMarkdown.vue'
       <div class="control-row">
         <AboutMarkdown></AboutMarkdown>
       </div>
-      <!-- <div class="control-divider"></div>
-      <div class="control-row decoration"></div> -->
     </div>
   </div>
 </template>

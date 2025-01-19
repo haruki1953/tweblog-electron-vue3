@@ -1,5 +1,4 @@
 import {
-  useAuthStore,
   useImageStore,
   usePostStore,
   useStatesStore,
@@ -9,17 +8,6 @@ import {
   useLogStore,
   useForwardStore
 } from '@/stores'
-import { useRouter } from 'vue-router'
-
-export const dataConfirmLoginService = () => {
-  const router = useRouter()
-  const authStore = useAuthStore()
-  if (authStore.token === '') {
-    router.push({ name: 'login' })
-    return false
-  }
-  return true
-}
 
 export const dataFirstLoadService = async () => {
   const postStore = usePostStore()

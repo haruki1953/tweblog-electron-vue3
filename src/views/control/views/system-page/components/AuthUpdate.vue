@@ -5,8 +5,6 @@ import { ref } from 'vue'
 import { User, Lock } from '@element-plus/icons-vue'
 import { adminUpdateAuthApi } from '@/api'
 import { sakiMessage } from '@/utils'
-import { useRouter } from 'vue-router'
-import { useAuthStore } from '@/stores'
 import type ConfirmContainer from '@/components/layout/ConfirmContainer.vue'
 
 const formModel = ref({
@@ -22,9 +20,6 @@ const resetAuth = () => {
   refElForm.value?.resetFields()
 }
 
-const router = useRouter()
-const authStore = useAuthStore()
-
 const isSubmitingAuth = ref(false)
 const submitAuth = async () => {
   // 预校验
@@ -38,11 +33,8 @@ const submitAuth = async () => {
     await adminUpdateAuthApi(formModel.value)
     sakiMessage({
       type: 'success',
-      message: '修改成功'
+      message: '设置成功'
     })
-    authStore.removeToken()
-    await new Promise((resolve) => setTimeout(resolve, 500))
-    router.push({ name: 'login' })
   } finally {
     isSubmitingAuth.value = false
     resetAuth()
@@ -58,12 +50,11 @@ const refConfirmContainer = ref<InstanceType<typeof ConfirmContainer> | null>(
     <ConfirmContainer
       ref="refConfirmContainer"
       backgroundColor="var(--color-background-soft)"
-      title="确认要修改账号密码吗？"
+      title="确认要设置用户名与密码吗？"
       confirmType="danger"
-      confirmText="修改"
       size="small"
     >
-      <div class="control-lable">修改用户名与密码</div>
+      <div class="control-lable">设置用户名与密码</div>
       <div class="form-box">
         <el-form
           :model="formModel"

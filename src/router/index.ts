@@ -5,7 +5,6 @@ import { nextTick, ref } from 'vue'
 import LayoutContainer from '@/views/layout/LayoutContainer.vue'
 import TestPage from '@/views/test/TestPage.vue'
 import HomePage from '@/views/home/HomePage.vue'
-import LoginPage from '@/views/login/LoginPage.vue'
 import SendPage from '@/views/post/SendPage.vue'
 import PostPage from '@/views/post/PostPage.vue'
 import PostForward from '@/views/post/PostForward.vue'
@@ -24,12 +23,6 @@ import { useImageStore, usePostStore, useProfileStore } from '@/stores'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      name: 'login',
-      path: '/login',
-      component: LoginPage,
-      meta: { title: `登录` }
-    },
     {
       path: '/',
       component: LayoutContainer,

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { dataConfirmLoginService } from '@/services'
 import {
   HomeFilled,
   InfoFilled,
@@ -9,11 +7,6 @@ import {
 } from '@element-plus/icons-vue'
 import ImageAltDialog from './components/ImageAltDialog.vue'
 import MenuIsland from './components/MenuIsland.vue'
-
-onMounted(async () => {
-  // check login
-  dataConfirmLoginService()
-})
 
 const menu = [
   {

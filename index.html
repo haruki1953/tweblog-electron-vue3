@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg"> -->
+  <link rel="icon" type="image/png" href="/favicon.png">
   <title>Tweblog</title>
   <link rel="stylesheet" href="/fontawesome-free-6.7.1-web/css/fontawesome.min.css">
   <link rel="stylesheet" href="/fontawesome-free-6.7.1-web/css/brands.min.css">
@@ -35,11 +36,24 @@
       overflow-x: hidden;
     }
 
-    * {
-      /* 窄滚动条 */
-      scrollbar-width: thin;
-      /* 滑块颜色 + 轨道透明 */
-      scrollbar-color: var(--my-neutral) transparent;
+    /* 滚动条宽度 */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    /* 滚动条轨道 */
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+      background: var(--my-neutral);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--my-neutral-a6);
     }
 
     body {
@@ -129,6 +143,11 @@
     }
   </style>
   <script>
+    // electron专用，非electron则跳转至根路径
+    if (window.desktopAPI == null) {
+      window.location.href = '/';
+      // console.log('electron专用，非electron则跳转至根路径')
+    }
     /* 在 index.html 中就初始化颜色，以避免加载过程中的白屏 */
     // 读取本地存储中的 vueuse-color-scheme 值
     const scheme = localStorage.getItem('vueuse-color-scheme') || 'auto';

@@ -47,5 +47,10 @@ export const appInfo = {
   forwardAutoDocs: {
     text: '说明',
     link: 'https://tweblog.com/guide/feature/tweet-forward#自动转发'
+  },
+  // Web端口说明
+  webPortDocs: {
+    text: '说明',
+    link: 'https://tweblog.com/guide/desktop#Web端口'
   }
 } as const
