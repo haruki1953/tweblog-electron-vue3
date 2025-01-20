@@ -1,6 +1,5 @@
 import { adminGetInfoApi } from '@/api'
 import type { AdminStoreModuleDependencies } from '..'
-import { sakiNotification } from '@/utils'
 import { computed, ref } from 'vue'
 import type { AdminGetInfoData } from '@/types'
 
