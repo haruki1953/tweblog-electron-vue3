@@ -3,12 +3,14 @@ const pollingIntervalBackoffCalc = (data: {
   // 未更新计数，从 1 开始累加
   notUpdateCount: number
 }) => {
-  const { notUpdateCount } = data
-  // 例如：线性退避，每次增加3秒，最大30秒
-  const baseInterval = 3000 // 基础间隔时间
-  const maxInterval = 30000 // 最大间隔时间
-  const interval = baseInterval * notUpdateCount
-  return Math.max(Math.min(interval, maxInterval), baseInterval)
+  // const { notUpdateCount } = data
+  // // 例如：线性退避，每次增加3秒，最大30秒
+  // const baseInterval = 3000 // 基础间隔时间
+  // const maxInterval = 30000 // 最大间隔时间
+  // const interval = baseInterval * notUpdateCount
+  // return Math.max(Math.min(interval, maxInterval), baseInterval)
+  // 桌面版不必要退避
+  return 3000
 }
 
 export const taskConfig = {

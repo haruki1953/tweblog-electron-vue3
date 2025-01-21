@@ -12,10 +12,10 @@ onMounted(async () => {
 
 const statesStore = useStatesStore()
 
-// 等待加载数据，最多等待3秒或10秒（第一次加载），最少等待1秒
+// 等待加载数据，最多等待3秒或10秒（第一次加载），最少等待3秒
 const dataFirstLoadAwait = async () => {
   const maxTimeout = statesStore.isFirstLoadFirstData ? 10000 : 3000
-  const minTimeout = 1000
+  const minTimeout = 3000
   await Promise.all([
     Promise.race([
       dataFirstLoadService().catch(() => {}),

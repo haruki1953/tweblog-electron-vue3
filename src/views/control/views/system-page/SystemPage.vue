@@ -11,6 +11,15 @@ import WebInfo from './components/WebInfo.vue'
   <div class="system-page">
     <div class="control-box">
       <div class="control-row">
+        <WebInfo></WebInfo>
+      </div>
+      <div class="control-divider"></div>
+      <div class="control-row">
+        <AuthUpdate></AuthUpdate>
+      </div>
+    </div>
+    <div class="control-box">
+      <div class="control-row">
         <ImageConfig></ImageConfig>
       </div>
       <div class="control-divider"></div>
@@ -29,15 +38,6 @@ import WebInfo from './components/WebInfo.vue'
       <div class="control-divider"></div>
       <div class="control-row">
         <ProxyTest></ProxyTest>
-      </div>
-    </div>
-    <div class="control-box">
-      <div class="control-row">
-        <WebInfo></WebInfo>
-      </div>
-      <div class="control-divider"></div>
-      <div class="control-row">
-        <AuthUpdate></AuthUpdate>
       </div>
     </div>
   </div>

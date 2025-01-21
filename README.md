@@ -5,6 +5,30 @@
 - 后端 https://github.com/haruki1953/tweet-blog-hono
 - 前端1（管理） https://github.com/haruki1953/tweet-blog-vue3
 - 前端2（公开） https://github.com/haruki1953/tweet-blog-public-vue3
+- 桌面版后端 https://github.com/haruki1953/tweblog-electron-hono
+- 桌面版前端 https://github.com/haruki1953/tweblog-electron-vue3
+
+本仓库是桌面版专用的前端
+
+运行前要在 `src\config\config.ts` 修改后端tweblog-electron-hono的路径
+```ts
+const apiBaseUrl = 'http://localhost:3000/api/'
+const staticBaseUrl = 'http://localhost:3000/'
+```
+
+开发服务器运行后，将被electron通过loadURL使用
+```
+pnpm install
+pnpm dev
+
+  ➜  Local:   http://localhost:5173/desktop/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+```
+
+
+
+
 
 This template should help get you started developing with Vue 3 in Vite.
 
