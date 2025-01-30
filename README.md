@@ -19,15 +19,13 @@ const staticBaseUrl = 'http://localhost:3000/'
 开发服务器运行后，将被electron通过loadURL使用
 ```
 pnpm install
+
 pnpm dev
 
   ➜  Local:   http://localhost:5173/desktop/
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 ```
-
-
-
 
 
 This template should help get you started developing with Vue 3 in Vite.

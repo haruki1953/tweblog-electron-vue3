@@ -20,10 +20,14 @@ const logStore = useLogStore()
 logStore.resetLimited()
 
 onMounted(() => {
-  if (logStore.isNeedReget) {
-    resetLog()
-    logStore.setNeedReget(false)
-  }
+  // if (logStore.isNeedReget) {
+  //   resetLog()
+  //   logStore.setNeedReget(false)
+  // }
+  // 【250130 桌面版优化】
+  // 对于桌面版，不需要担心请求过多，每次进入日志页面都要刷新
+  resetLog()
+  logStore.setNeedReget(false)
 })
 
 const isRefreshing = ref(false)
@@ -180,6 +184,7 @@ const scrollLoad = () => {
         v-if="logStore.isHaveMoreLimited && logStore.limitedList.length"
       >
         <el-button
+          text
           type="primary"
           round
           size="small"

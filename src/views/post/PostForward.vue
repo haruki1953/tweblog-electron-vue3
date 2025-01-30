@@ -39,6 +39,10 @@ const loadPostPoolItemData = async () => {
   await postStore.getPostById(routePostId.value)
 }
 
+// 【250130 桌面版优化】
+// 对于桌面版，不需要担心请求过多，每次在帖子页面重置已请求记录
+postStore.resetPostRequested()
+
 onMounted(() => {
   loadPostPoolItemData()
 })
