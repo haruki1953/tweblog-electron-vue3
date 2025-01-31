@@ -10,10 +10,15 @@
 
 本仓库是桌面版专用的前端
 
-运行前要在 `src\config\config.ts` 修改后端tweblog-electron-hono的路径
+运行前要在 `src\config\config.ts` 修改后端 tweblog-electron-hono 的路径
 ```ts
-const apiBaseUrl = 'http://localhost:3000/api/'
-const staticBaseUrl = 'http://localhost:3000/'
+// 开发时使用的
+const apiBaseUrl = 'http://localhost:51125/api/'
+const staticBaseUrl = 'http://localhost:51125/'
+
+// // 部署时，将由后端来托管前端，设置为根路径
+// const apiBaseUrl = '/api/'
+// const staticBaseUrl = '/'
 ```
 
 开发服务器运行后，将被electron通过loadURL使用

@@ -1,14 +1,10 @@
-// // 开发时使用的
-// const apiBaseUrl = 'http://localhost:3000/api/'
-// const staticBaseUrl = 'http://localhost:3000/'
+// 开发时使用的
+const apiBaseUrl = 'http://localhost:51125/api/'
+const staticBaseUrl = 'http://localhost:51125/'
 
-// // 这是为了在手机上测试，需要的话要改为自己电脑的ip
-// const apiBaseUrl = 'http://192.168.2.110:3000/api/'
-// const staticBaseUrl = 'http://192.168.2.110:3000/'
-
-// 部署时，将由后端来托管前端，设置为根路径
-const apiBaseUrl = '/api/'
-const staticBaseUrl = '/'
+// // 部署时，将由后端来托管前端，设置为根路径
+// const apiBaseUrl = '/api/'
+// const staticBaseUrl = '/'
 
 export const axiosConfig = {
   baseUrl: apiBaseUrl,
@@ -20,8 +16,6 @@ export const axiosConfig = {
 export const webName = 'Tweblog'
 
 // logo图标
-// import logoImage from '@/assets/logo.png'
-// import logoImage from '@/assets/icon2x.png'
 import logoImage from '@/assets/tweet.svg'
 export { logoImage }
 
@@ -88,8 +82,3 @@ export const postConfig = {
   // 超过限制时移除的数量
   postPoolSizeRemove: 50
 }
-
-// 占位图片
-import sakiPlaceholder from '@/assets/saki-placeholder.jpg'
-import sakiError from '@/assets/saki-error.jpg'
-export { sakiPlaceholder, sakiError }
