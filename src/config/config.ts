@@ -1,10 +1,10 @@
-// 开发时使用的
-const apiBaseUrl = 'http://localhost:51125/api/'
-const staticBaseUrl = 'http://localhost:51125/'
+// // 开发时使用的
+// const apiBaseUrl = 'http://localhost:51125/api/'
+// const staticBaseUrl = 'http://localhost:51125/'
 
-// // 部署时，将由后端来托管前端，设置为根路径
-// const apiBaseUrl = '/api/'
-// const staticBaseUrl = '/'
+// 部署时，将由后端来托管前端，设置为根路径
+const apiBaseUrl = '/api/'
+const staticBaseUrl = '/'
 
 export const axiosConfig = {
   baseUrl: apiBaseUrl,

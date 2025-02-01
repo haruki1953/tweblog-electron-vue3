@@ -31,3 +31,18 @@ export const dataFirstLoadService = async () => {
   ])
   statesStore.setFirstDataLoading(false)
 }
+
+// 桌面版在设置页面刷新数据
+export const dataDesktopControlLoadService = async () => {
+  const profileStore = useProfileStore()
+  const adminStore = useAdminStore()
+  const taskStore = useTaskStore()
+  const forwardStore = useForwardStore()
+
+  await Promise.all([
+    profileStore.loadAll(),
+    adminStore.loadInfo(),
+    taskStore.pollLoad(),
+    forwardStore.loadFirst()
+  ])
+}

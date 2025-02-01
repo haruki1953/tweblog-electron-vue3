@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { dataDesktopControlLoadService } from '@/services'
 import type { IconMenuItem } from '@/types'
 import {
   User,
@@ -7,7 +8,12 @@ import {
   Sell,
   Tickets
 } from '@element-plus/icons-vue'
+import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+
+onMounted(async () => {
+  await dataDesktopControlLoadService()
+})
 
 const router = useRouter()
 
