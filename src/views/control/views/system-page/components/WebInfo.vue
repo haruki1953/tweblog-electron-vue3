@@ -12,6 +12,7 @@ const httpPort = ref(0)
 
 const webLinkPublic = computed(() => `http://127.0.0.1:${httpPort.value}/`)
 const webLinkAdmin = computed(() => `http://127.0.0.1:${httpPort.value}/admin/`)
+const webLinkDocs = computed(() => `http://127.0.0.1:${httpPort.value}/docs/`)
 </script>
 <template>
   <div class="image-all-original-delete">
@@ -47,14 +48,16 @@ const webLinkAdmin = computed(() => `http://127.0.0.1:${httpPort.value}/admin/`)
           class="control-input"
           readonly
         ></el-input>
-        <!-- <a
-          class="web-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="webLinkAdmin"
-        >
-          {{ webLinkAdmin }}
-        </a> -->
+      </div>
+      <div class="form-row">
+        <div class="input-lable">本地文档</div>
+        <el-input
+          :modelValue="webLinkDocs"
+          :prefix-icon="Link"
+          size="large"
+          class="control-input"
+          readonly
+        ></el-input>
       </div>
     </div>
   </div>
